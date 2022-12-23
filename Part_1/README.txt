@@ -37,3 +37,12 @@ crop_image.py:
   
 {PATH_FOR_OUTPUT_FOLDER} python {PATH_TO_CODE_FILE}/crop_image.py {PATH_TO_INPUT_TXT_FILE} {PATH_TO_SVS_FOLDER}   
 
+training_jupyter.ipynb:
+  The jupyter notebook file for training the tile dataset on EfficientnetB0. The training, testing, and validation datasets are loaded into a data loader class with their corresponding features. The parameters for EfficientnetB0 are set so the algorithm can be run on 5 and 40 epochs. The output is then analyzed for accuracy, loss and the outcome of the validation sample in the trained model. 
+    outputs:
+      accuracy plot
+      loss plot
+      validation accuracy/loss
+      validation heat maps for likelihood of no cancer = 0 and cancer = 1
+      validation deconvolution matrix
+    The paths for this notebook need to be manually set in this code for the training, test, and validation sets. All outputs will be to the same filder as the jupyter notebook code.
